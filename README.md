@@ -1,6 +1,6 @@
-#Lukifer23— On-Device AI, Apple-Silicon First
+# Lukifer23 — On-Device AI, Apple-Silicon First
 
-**I build privacy-first, on-device AI for Apple Silicon and Android** — local LLM chat (**IRISStar**), a low-latency Mac voice assistant (**MacBot**), chess engines that both play and teach (**Matrix0**, **GemmaFischer**), and a high-fidelity PNG→SVG tool (**svg-X**). **Releases, benchmarks, and clear docs.**
+**I build privacy-first, on-device AI for Apple Silicon and Android** — local LLM chat (**IRISStar**), a low-latency Mac voice assistant (**MacBot**), chess engines that play *and* teach (**Matrix0**, **GemmaFischer**), and a high-fidelity PNG→SVG tool (**svg-X**).
 
 - **Focus:** Apple Silicon (M-series) & Snapdragon • local LLMs • realtime voice • chess engines • vectorization  
 - **Philosophy:** Results > rhetoric. If it’s not measurable, it’s not done.
@@ -8,58 +8,50 @@
 ---
 
 ## Now
-- Publishing **GemmaFischer** LoRA adapters on HF + tutor-mode evals  
-- Tagging **IRISStar v0.1** with a signed APK + device matrix  
-- Recording short demo clips and adding latency/Elo/tokens-per-second tables across repos
+- Finalizing **GemmaFischer**: LoRA adapters on HF + tutor-mode evaluations + transcript examples  
+- Next up: **IRISStar** (packaging, device matrix) → **MacBot** (demos, latency table) → **Matrix0** (checkpoint, Elo ladder)
+
+> I’ll add numbers and binaries here *after* they’re published in each repo’s Releases.
 
 ---
 
-## Highlights (keep current as you measure)
-- **MacBot** median STT latency: ~**N** ms on **M3 Pro** @ 16 kHz  
-- **Matrix0** strength: ~**ELO** at **TC** (vs fixed baseline)  
-- **svg-X**: average SVG size ↓ **X%** vs baseline on complex logos
+## Selected Work (with status)
 
-> Tip: keep this section honest and tiny—three numbers maximum, updated as releases land.
+**Legend:** 🚀 available • 🛠️ active update • 🔬 research/prototype
 
----
+- 🚀 **[svg-X](https://github.com/lukifer23/svg-X)** — PNG→SVG with quantization + curve fitting (desktop/CLI).  
+  *Cross-platform app; releases available in the repo.*
 
-## Selected Work
-- **[MacBot](https://github.com/lukifer23/MacBot)** — local VAD → Whisper v3 → LLM → TTS with a live dashboard (macOS). *Goal:* <300 ms STT median, responsive barge-in, simple app bundle.
-- **[IRISStar](https://github.com/lukifer23/IRISStar)** — Android offline LLM client (GGUF) tuned for Snapdragon/Apple GPU backends. *Goal:* signed APK + device/perf matrix.
-- **[Matrix0](https://github.com/lukifer23/Matrix0)** — self-play chess engine with SSL heads, Apple-Silicon optimizations, and a web UI. *Goal:* provisional Elo ladder @ 5+0 with a small checkpoint.
-- **[GemmaFischer](https://github.com/lukifer23/GemmaFischer)** — MoE chess LLM (UCI + tutor mode). *Action:* link LoRA adapters on HF + tutor-mode eval harness.
-- **[svg-X](https://github.com/lukifer23/svg-X)** — PNG→SVG with quantization + curve fitting (desktop/CLI). *Goal:* .dmg + AppImage + 10-sec before/after GIF.
+- 🛠️ **[GemmaFischer](https://github.com/lukifer23/GemmaFischer)** — MoE chess LLM (UCI + tutor mode).  
+  *Linking LoRA adapters on HF and adding a small eval harness + tutor transcripts.*
 
----
+- 🛠️ **[IRISStar](https://github.com/lukifer23/IRISStar)** — Android offline LLM client (GGUF) tuned for Snapdragon/Apple GPU backends.  
+  *Packaging and a concise device/perf matrix are in progress.*
 
-## Quick Links
-**Releases:**  
-[MacBot → Releases](https://github.com/lukifer23/MacBot/releases) •
-[IRISStar → Releases](https://github.com/lukifer23/IRISStar/releases) •
-[Matrix0 → Releases](https://github.com/lukifer23/Matrix0/releases) •
-[GemmaFischer → Releases](https://github.com/lukifer23/GemmaFischer/releases) •
-[svg-X → Releases](https://github.com/lukifer23/svg-X/releases)
+- 🛠️ **[MacBot](https://github.com/lukifer23/MacBot)** — local VAD → Whisper v3 → LLM → TTS with a live dashboard (macOS).  
+  *Short demo clips and a simple latency table are coming alongside a pre-alpha app bundle.*
 
+- 🛠️ **[Matrix0](https://github.com/lukifer23/Matrix0)** — self-play chess engine with SSL heads and a web UI.  
+  *Publishing a small checkpoint and a provisional Elo ladder vs a fixed baseline.*
 
-<details>
-<summary><b>Results at a Glance</b></summary>
-
-| Project     | Metric            | Value  | Notes                                   |
-|---          |---                |---:    |---                                      |
-| MacBot      | STT latency (p50) | **N** ms | 16 kHz, streaming VAD → Whisper v3       |
-| IRISStar    | Tokens/s          | **N**   | 3–7B GGUF on recent Snapdragon           |
-| Matrix0     | Elo @ 5+0         | **N**   | vs fixed baseline depth/time             |
-| GemmaFischer| Tutor eval score  | **N**%  | rubric: clarity + correctness            |
-| svg-X       | Size reduction     | **X**%  | vs baseline on complex logos             |
-
-*Details live in each repo’s `/results` with exact commands, models, and seeds.*
-</details>
+- 🔬 **[FusterCluck](https://github.com/lukifer23/FusterCluck)** — compact text-only LLM training pipeline for Apple Silicon.  
+  *Early-stage; staged curriculum and tooling are public.*
 
 ---
 
-## Roadmap (short and public)
-- **IRISStar:** signed APK on tag; “What’s different from upstream” + crash-safe loader; perf presets (4B-Lite / 7B-Balanced / 13B-Max).  
-- **MacBot:** zipped macOS app bundle; two short audio demos; latency table (median/p95) by device.  
-- **Matrix0:** upload a small checkpoint; publish Elo vs baseline; web-UI GIF.  
-- **GemmaFischer:** HF LoRA adapters; UCI demo script; tutor-mode transcript GIF; small eval harness.  
-- **svg-X:** macOS .dmg + Linux AppImage; 10-sec before/
+## How I work
+- **On-device first:** privacy by default; minimal dependencies; clear fallbacks.  
+- **Reproducible setups:** pinned configs and end-to-end quickstarts.  
+- **Evidence over adjectives:** when a metric or binary exists, it appears in the repo’s **Releases** and **/results**.
+
+---
+
+## Where to find releases
+- Each project publishes artifacts **in its own repo** under **Releases** when ready.  
+- I’ll surface notable numbers (latency, tokens/s, Elo, size deltas) here once they’re live.
+
+---
+
+## Contact
+- X / email / website: *add your links here*  
+- Issues and PRs welcome.
