@@ -1,4 +1,4 @@
-# Luke Scaggs — On-Device AI, Apple-Silicon First
+#Lukifer23— On-Device AI, Apple-Silicon First
 
 **I build privacy-first, on-device AI for Apple Silicon and Android** — local LLM chat (**IRISStar**), a low-latency Mac voice assistant (**MacBot**), chess engines that both play and teach (**Matrix0**, **GemmaFischer**), and a high-fidelity PNG→SVG tool (**svg-X**). **Releases, benchmarks, and clear docs.**
 
