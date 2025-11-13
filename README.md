@@ -25,9 +25,6 @@
 - 🛠️ **[GemmaFischer](https://github.com/lukifer23/GemmaFischer)** — MoE chess LLM (UCI + tutor mode).  
   *Linking LoRA adapters on HF and adding a small eval harness + tutor transcripts.*
 
-- 🛠️ **[IRISStar](https://github.com/lukifer23/IRISStar)** — Android offline LLM client (GGUF) tuned for Snapdragon/Apple GPU backends.  
-  *Packaging and a concise device/perf matrix are in progress.*
-
 - 🛠️ **[MacBot](https://github.com/lukifer23/MacBot)** — local VAD → Whisper v3 → LLM → TTS with a live dashboard (macOS).  
   *Short demo clips and a simple latency table are coming alongside a pre-alpha app bundle.*
 
