@@ -1,69 +1,94 @@
-# Lukifer23
+# Luke Scaggs
 
-On-device AI for hardware people actually own.
+**AI systems builder · local-first software · model evaluation · practical tooling**
 
-I build local-first systems on **Apple Silicon** and **Android**: voice agents, small-model training and fine-tunes, chess engines, and practical desktop/mobile tools. The throughline is simple — privacy by default, measurable performance, and evidence before hype.
+I build software around a simple idea: advanced AI should be useful on hardware people actually own.
 
-- **Current focus:** offline voice pipelines, chess evaluation / self-play, Android readers & on-device apps, vectorization tooling
-- **Working rule:** if a result matters, it should have a config, a log, a benchmark, or a release artifact
-- **Primary targets:** macOS (Metal / MLX / MPS), Android (Kotlin / on-device inference)
+My work spans **local AI agents, model evaluation, post-training experiments, chess systems, desktop tooling, and Android applications**, with an emphasis on privacy, reproducibility, measurable performance, and software that survives contact with real users.
 
----
-
-## Selected Work
-
-### Local AI
-
-**[MacBot](https://github.com/lukifer23/MacBot)** · Python · ⭐ flagship voice stack  
-Offline macOS voice assistant with an interruptible pipeline: VAD → Whisper STT → local LLM (llama.cpp) → neural TTS. Metal acceleration, native macOS tools, secure local RAG, and a realtime WebSocket dashboard.
-
-**[GemmaFischer](https://github.com/lukifer23/GemmaFischer)** · Python · [HF adapters](https://huggingface.co/collections/Dontbeafed69/gemmafischer-chess-engine-and-tutor-with-mixture-of-experts-68e6a915d31285cda968d204)  
-Fine-tuned Gemma-3 as a UCI chess engine + interactive tutor. LoRA experts (UCI / tutor / director), MoE-style routing, and Apple Silicon MPS training/inference.
-
-**[Matrix0](https://github.com/lukifer23/Matrix0)** · Python  
-AlphaZero-style chess engine with SSL heads for tactical pattern recognition (threats, pins, forks, control). Multi-task RL on a ResNet backbone, MCTS, MPS optimization, WebUI, and fixed-baseline benchmarking.
-
-### Tools & Apps
-
-**[svg-X](https://github.com/lukifer23/svg-X)** · TypeScript · [releases](https://github.com/lukifer23/svg-X/releases)  
-Desktop + CLI image→SVG converter (Electron/React). Triple pipeline: Potrace B&W, color posterization with Bezier fitting, and centerline stroke mode. Exports SVG / EPS / DXF / JSON paths.
-
-**[XReader](https://github.com/lukifer23/XReader)** · Kotlin  
-Native Android e-reader for DRM-free personal libraries. SAF import, app-private storage, multi-format conversion into a Readium path, local notes/bookmarks/search — no cloud required.
-
-**[ChessTrainer](https://github.com/lukifer23/ChessTrainer)** · Java  
-On-device Android chess trainer with local Stockfish / LC0 engines, lessons, analysis, and foldable-friendly UI.
-
-**[Breakout-](https://github.com/lukifer23/Breakout-)** · Kotlin  
-Offline brick-breaker built for phones and foldables: OpenGL rendering, fixed-step physics, multiple modes and powerups, no network or analytics SDK.
+Most of my projects target **Apple Silicon, Android, and consumer GPUs**, using Python, Swift/SwiftUI, Kotlin, TypeScript, MLX, MPS, llama.cpp, local inference runtimes, and conventional software engineering where AI is not the right tool.
 
 ---
 
-## Lab notes
+## Featured projects
 
-Work in progress tends to stay private until configs, evals, and docs are honest enough to ship. Themes that show up across public and private repos:
+### [GemmaFischer](https://github.com/lukifer23/GemmaFischer)
+**Local-first chess training and game-to-mastery system** · Python · Stockfish · MLX
 
-- **Local LLMs** — post-training, adapters, and small-model stacks aimed at real devices
-- **Realtime voice** — interruptible STT → LLM → TTS loops with latency budgets
-- **Chess + evaluation** — engines, tutors, self-play, and reproducible match gates
-- **Android privacy tools** — readers, on-device assistants, offline-first mobile apps
+Imports real games, identifies high-value decisions with a bounded Stockfish pipeline, turns mistakes into interactive lessons, supports delayed review, and keeps chess authority deterministic and auditable. Optional local-model work is isolated from grading and factual chess evaluation.
+
+### [MacBot](https://github.com/lukifer23/MacBot)
+**Private macOS AI assistant and local agent runtime** · Python · SwiftUI · llama.cpp
+
+A native-first assistant for Apple Silicon with local inference, voice, document retrieval, durable tasks, encrypted local persistence, model lifecycle management, recovery tooling, and explicit capability boundaries. The project is designed around one owned runtime rather than a collection of loosely connected demos.
+
+### [UMI — Unified Model Index](https://github.com/lukifer23/UMI---Unified-Model-Index)
+**Auditable model evaluation and comparison framework** · Python
+
+A reproducible system for comparing exact model configurations across capability, operational efficiency, and economics using governed public evidence. It includes source validation, uncertainty analysis, ablation, score certificates, dashboards, and fail-closed handling when evidence is incomplete.
+
+### [svg-X](https://github.com/lukifer23/svg-X)
+**Desktop + CLI raster-to-vector toolkit** · TypeScript · Electron · React
+
+Converts raster images into SVG/EPS/DXF/JSON paths through multiple vectorization pipelines, including monochrome tracing, color-region reconstruction, and centerline output. Recent work focuses on bounded curve fitting, throughput, packaging, and regression-tested performance.
+
+### [XReader](https://github.com/lukifer23/XReader)
+**Privacy-focused Android reader** · Kotlin
+
+A native reader for personal DRM-free libraries with local import, persistence, notes, search, reading continuity, and offline narration/audiobook workflows. Built around app-owned storage and local operation rather than mandatory cloud services.
+
+### [MowerBoy](https://github.com/lukifer23/mowerboy)
+**Accessible touch-first game for phones and tablets** · TypeScript
+
+A deliberately simple, no-fail mowing and vacuuming game designed for one-finger play. It includes responsive touch controls, accessibility modes, offline support, reproducible releases, cross-platform hosting, and extensive browser/production verification.
 
 ---
 
-## How I ship
+## Other work
 
-| Principle | Practice |
+- **[Qwen 3.8 27B ternary-style quantization experiments](https://github.com/lukifer23/Qwen-3.8-27B-Ternary-Style-Quant-)** — activation-aware reconstruction and aggressive local-model compression experiments.
+- **[Matrix0](https://github.com/lukifer23/Matrix0)** — AlphaZero-style chess engine with MCTS, self-play, and auxiliary tactical objectives.
+- **[ChessTrainer](https://github.com/lukifer23/ChessTrainer)** — Android chess training with local engine analysis and foldable-friendly UI.
+- **[Breakout-](https://github.com/lukifer23/Breakout-)** — offline Android brick-breaker built for phones and foldables.
+
+---
+
+## What I care about
+
+| Area | Approach |
 |---|---|
-| **Local first** | Privacy by default; Apple Silicon primary, Android/Snapdragon where it fits |
-| **Measured progress** | tokens/sec, latency, Elo, perplexity, pass rates, and failure examples over vibes |
-| **Readable repos** | configs, docs, scripts, and run logs so work is reproducible without archaeology |
-| **Releases when ready** | binaries, model artifacts, and notable metrics live on each project's Releases / HF / results |
+| **Local AI** | Run useful models on real consumer hardware; minimize unnecessary cloud dependency |
+| **Evaluation** | Prefer reproducible evidence, fixed configs, logs, benchmarks, and failure cases over vibes |
+| **Agents** | Explicit authority, durable state, recoverable execution, bounded tools, visible failure modes |
+| **Performance** | Measure latency, throughput, memory, Elo, quality gates, and regressions instead of guessing |
+| **Product quality** | Persistence, accessibility, packaging, failure recovery, documentation, and real release checks matter |
+| **Privacy** | Local-first by default when the product can reasonably support it |
+
+---
+
+## Current focus
+
+- Local and on-device AI systems for **Apple Silicon, Android, and consumer GPUs**
+- Small-model inference, post-training, compression, and evaluation
+- Agent architecture, tool use, persistence, recovery, and computer interaction
+- Reproducible model benchmarking and evidence-backed comparison
+- Building complete applications around AI rather than isolated model demos
+
+---
+
+## Stack
+
+**Languages:** Python · Swift/SwiftUI · Kotlin/Java · TypeScript/JavaScript · C/C++
+
+**AI / ML:** MLX · PyTorch/MPS · llama.cpp · local LLM/VLM runtimes · LoRA/post-training · MCTS · ONNX
+
+**Application work:** macOS · Android · Electron/React · FastAPI · SQLite · native desktop/mobile integration
 
 ---
 
 ## Elsewhere
 
 - **GitHub:** [github.com/lukifer23](https://github.com/lukifer23)
-- **Models:** [Hugging Face](https://huggingface.co/Dontbeafed69) (GemmaFischer LoRA collection)
+- **Models / experiments:** [Hugging Face](https://huggingface.co/Dontbeafed69)
 
-For project-specific questions, open an issue in the relevant repo. For collaboration, start with the project closest to what you want to build or test.
+I am particularly interested in **local AI, model evaluation, agents, applied ML, and engineering work that turns research capabilities into dependable software**.
