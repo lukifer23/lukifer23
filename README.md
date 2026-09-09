@@ -1,12 +1,24 @@
 # Luke Scaggs
 
-**AI systems builder · local-first software · model evaluation · practical tooling**
+**AI systems builder · operations tooling · automotive software · analytics · local-first AI**
 
-I build software around a simple idea: advanced AI should be useful on hardware people actually own.
+I build practical software for real workflows — from local AI systems and model evaluation to **custom operational, automotive, and analytics solutions**.
 
-My work spans **local AI agents, model evaluation, post-training experiments, chess systems, desktop tooling, and Android applications**, with an emphasis on privacy, reproducibility, measurable performance, and software that survives contact with real users.
+My work spans **AI agents, model evaluation, post-training experiments, automotive acquisition tooling, workflow automation, analytics, chess systems, desktop software, and Android applications**. The common thread is simple: identify a real problem, build the system around the workflow, measure what matters, and make the result dependable enough to use.
 
-Most of my projects target **Apple Silicon, Android, and consumer GPUs**, using Python, Swift/SwiftUI, Kotlin, TypeScript, MLX, MPS, llama.cpp, local inference runtimes, and conventional software engineering where AI is not the right tool.
+I am especially interested in the space between **software engineering, applied AI, and operations**: tools that reduce repetitive work, surface better decisions, connect fragmented systems, and turn domain knowledge into useful software.
+
+Most of my AI work targets **Apple Silicon, Android, and consumer GPUs**, using Python, Swift/SwiftUI, Kotlin, TypeScript, MLX, MPS, llama.cpp, local inference runtimes, and conventional software engineering where AI is not the right tool.
+
+---
+
+## What I build
+
+- **AI & agent systems** — local inference, tool use, durable tasks, retrieval, voice, model lifecycle, and bounded automation
+- **Operations software** — custom internal tools, workflow automation, data integration, decision support, and reliability-focused utilities
+- **Automotive solutions** — acquisition intelligence, wholesale workflows, transportation/logistics tooling, auction data, and buyer decision support
+- **Analytics & evaluation** — dashboards, governed metrics, model benchmarking, evidence pipelines, uncertainty analysis, and reproducible reporting
+- **Desktop & mobile products** — macOS, Android, Electron/React, accessible interfaces, offline-first workflows, and native integrations
 
 ---
 
@@ -44,6 +56,21 @@ A deliberately simple, no-fail mowing and vacuuming game designed for one-finger
 
 ---
 
+## Operations, automotive & analytics
+
+A significant part of my work is building **custom tools around operational problems**, especially where existing software leaves people stitching together spreadsheets, browser tabs, APIs, and repetitive manual decisions.
+
+Current and ongoing work includes:
+
+- **Automotive acquisition intelligence** — tools for wholesale buyers that combine auction context, vehicle data, pricing signals, rules, and decision support
+- **Transportation & logistics workflows** — automation and coordination around dispatch, carrier workflows, status tracking, and operational handoffs
+- **Analytics systems** — KPI design, dashboards, model/evidence comparison, operational reporting, and decision-support surfaces
+- **Workflow automation** — connecting APIs and internal processes while keeping failure states visible and recoverable
+
+Some domain-specific systems remain private while they are actively used, contain integration-sensitive work, or are being prepared for a cleaner public release.
+
+---
+
 ## Other work
 
 - **[Qwen 3.8 27B ternary-style quantization experiments](https://github.com/lukifer23/Qwen-3.8-27B-Ternary-Style-Quant-)** — activation-aware reconstruction and aggressive local-model compression experiments.
@@ -53,13 +80,15 @@ A deliberately simple, no-fail mowing and vacuuming game designed for one-finger
 
 ---
 
-## What I care about
+## Engineering principles
 
 | Area | Approach |
 |---|---|
-| **Local AI** | Run useful models on real consumer hardware; minimize unnecessary cloud dependency |
+| **Solve the workflow** | Start from the actual operational problem, not from a preferred technology |
+| **Local AI** | Run useful models on real consumer hardware when local execution makes sense |
 | **Evaluation** | Prefer reproducible evidence, fixed configs, logs, benchmarks, and failure cases over vibes |
 | **Agents** | Explicit authority, durable state, recoverable execution, bounded tools, visible failure modes |
+| **Analytics** | Metrics should support decisions; definitions, provenance, and uncertainty should be clear |
 | **Performance** | Measure latency, throughput, memory, Elo, quality gates, and regressions instead of guessing |
 | **Product quality** | Persistence, accessibility, packaging, failure recovery, documentation, and real release checks matter |
 | **Privacy** | Local-first by default when the product can reasonably support it |
@@ -69,9 +98,11 @@ A deliberately simple, no-fail mowing and vacuuming game designed for one-finger
 ## Current focus
 
 - Local and on-device AI systems for **Apple Silicon, Android, and consumer GPUs**
-- Small-model inference, post-training, compression, and evaluation
+- Custom **operations, automotive, and analytics software**
 - Agent architecture, tool use, persistence, recovery, and computer interaction
+- Small-model inference, post-training, compression, and evaluation
 - Reproducible model benchmarking and evidence-backed comparison
+- Workflow automation and API integrations for real operational systems
 - Building complete applications around AI rather than isolated model demos
 
 ---
@@ -82,7 +113,7 @@ A deliberately simple, no-fail mowing and vacuuming game designed for one-finger
 
 **AI / ML:** MLX · PyTorch/MPS · llama.cpp · local LLM/VLM runtimes · LoRA/post-training · MCTS · ONNX
 
-**Application work:** macOS · Android · Electron/React · FastAPI · SQLite · native desktop/mobile integration
+**Application & data work:** macOS · Android · Electron/React · FastAPI · SQLite · APIs/integrations · dashboards · operational analytics
 
 ---
 
@@ -91,4 +122,4 @@ A deliberately simple, no-fail mowing and vacuuming game designed for one-finger
 - **GitHub:** [github.com/lukifer23](https://github.com/lukifer23)
 - **Models / experiments:** [Hugging Face](https://huggingface.co/Dontbeafed69)
 
-I am particularly interested in **local AI, model evaluation, agents, applied ML, and engineering work that turns research capabilities into dependable software**.
+I am particularly interested in **applied AI, agents, model evaluation, automotive technology, operational tooling, analytics, and engineering work that turns domain knowledge into dependable software**.
