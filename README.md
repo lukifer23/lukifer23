@@ -57,6 +57,17 @@ A native reader for personal DRM-free libraries with local import, persistence, 
 
 ---
 
+## Private commercial work
+
+### SimplyStitch
+**Private embroidery design and digitization product** · React · Tauri · Rust
+
+A longstanding commercial software project focused on embroidery design, digitization, machine-file export, and local desktop workflows. The product has involved substantial work across interactive UI, geometry, file-format handling, persistence, validation, and cross-platform engineering. The codebase remains private because the product and underlying IP may be commercialized or sold.
+
+This project is intentionally described at a high level; implementation details and proprietary workflows are not public.
+
+---
+
 ## Operations, automotive & analytics
 
 A significant part of my work is building **custom tools around operational problems**, especially where existing software leaves people stitching together spreadsheets, browser tabs, APIs, and repetitive manual decisions.
@@ -114,11 +125,11 @@ Some domain-specific systems remain private while they are actively used, contai
 
 ## Stack
 
-**Languages:** Python · Swift/SwiftUI · Kotlin/Java · TypeScript/JavaScript · C/C++
+**Languages:** Python · Swift/SwiftUI · Kotlin/Java · TypeScript/JavaScript · Rust · C/C++
 
 **AI / ML:** MLX · PyTorch/MPS · llama.cpp · ONNX Runtime · local LLM/VLM runtimes · LoRA/post-training · MCTS · computer vision
 
-**Application & data work:** macOS · Android · Electron/React · FastAPI · SQLite · APIs/integrations · dashboards · operational analytics · geospatial tooling
+**Application & data work:** macOS · Android · Electron/React · Tauri · FastAPI · SQLite · APIs/integrations · dashboards · operational analytics · geospatial tooling
 
 ---
 
